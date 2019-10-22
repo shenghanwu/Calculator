@@ -253,7 +253,7 @@ public class Calculator extends Frame implements ActionListener, KeyListener {
         lastOperator = input;
     }
 
-    //ActionListener和WindowListener接口函数重载
+    //ActionListener接口函数重载
     public void actionPerformed(ActionEvent e) {//按钮单击事件处理
         if (e.getSource().equals(button_0) || e.getSource().equals(button_1) || e.getSource().equals(button_2) ||
                 e.getSource().equals(button_3) || e.getSource().equals(button_4) || e.getSource().equals(button_5) ||
