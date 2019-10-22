@@ -39,6 +39,7 @@ public class Calculator extends Frame implements ActionListener, WindowListener,
         this.setLayout(new GridLayout(6,1,4,4));
         this.setBackground(new Color(46,47,50));
         displayField = new JTextField(20);
+        displayField.setEditable(false);//不允许输入
         displayField.setBackground(new Color(46,47,50));
         displayField.setBorder(new EmptyBorder(0,0,0,0));//边框去除
         displayField.setFont(new Font("宋体", Font.PLAIN,40));
