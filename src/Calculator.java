@@ -3,8 +3,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Calculator extends Frame implements ActionListener, WindowListener, KeyListener {
-    private Container container;
+public class Calculator extends Frame implements ActionListener, KeyListener {
     private JTextField displayField;//结果显示区
     private JButton button_plus_minus;//+/-
     private JButton button_c;//CE建
@@ -39,7 +38,7 @@ public class Calculator extends Frame implements ActionListener, WindowListener,
         this.setLayout(new GridLayout(6,1,4,4));
         this.setBackground(new Color(46,47,50));
         displayField = new JTextField(20);
-        displayField.setEditable(false);//不允许输入
+        displayField.setEditable(false);//允许输入？还是直接接受键盘输入？
         displayField.setBackground(new Color(46,47,50));
         displayField.setBorder(new EmptyBorder(0,0,0,0));//边框去除
         displayField.setFont(new Font("宋体", Font.PLAIN,40));
@@ -301,15 +300,6 @@ public class Calculator extends Frame implements ActionListener, WindowListener,
             input_newnum = true;
         }
     }
-    public void windowClosing(WindowEvent e) {//关闭窗口
-        System.exit(0);
-    }
-    public void windowOpened(WindowEvent e) { }
-    public void windowActivated(WindowEvent e) { }
-    public void windowDeactivated(WindowEvent e) { }
-    public void windowClosed(WindowEvent e) { }
-    public void windowIconified(WindowEvent e) { }
-    public void windowDeiconified(WindowEvent e) { }
 
     //KeyListener实现部分
     public void keyPressed(KeyEvent e) {
